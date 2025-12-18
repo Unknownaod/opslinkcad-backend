@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: opslinkcad-backend
+    env: node
+    plan: starter
+    buildCommand: npm ci && npm run build
+    startCommand: npm run render-start
+    healthCheckPath: /health
+    autoDeploy: true
